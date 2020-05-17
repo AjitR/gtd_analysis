@@ -1,0 +1,152 @@
+,Unnamed: 0,country,country_txt,cases,code
+0,0,4,Afghanistan,12677,AFG
+1,1,5,Albania,64,ALB
+2,2,6,Algeria,2567,DZA
+3,3,7,Andorra,1,AND
+4,4,8,Angola,486,AGO
+5,5,10,Antigua and Barbuda,1,ATG
+6,6,11,Argentina,718,ARG
+7,7,12,Armenia,20,ARM
+8,8,14,Australia,100,AUS
+9,9,15,Austria,89,AUT
+10,10,16,Azerbaijan,44,AZE
+11,12,18,Bahrain,180,BHR
+12,13,19,Bangladesh,1549,BGD
+13,14,20,Barbados,3,BRB
+14,15,21,Belgium,128,BEL
+15,16,22,Belize,7,BLZ
+16,17,23,Benin,8,BEN
+17,18,25,Bhutan,6,BTN
+18,21,29,Botswana,10,BWA
+19,22,30,Brazil,245,BRA
+20,24,32,Bulgaria,47,BGR
+21,25,33,Burkina Faso,110,BFA
+22,26,34,Burundi,600,BDI
+23,27,35,Belarus,13,BLR
+24,28,36,Cambodia,243,KHM
+25,29,37,Cameroon,535,CMR
+26,30,38,Canada,80,CAN
+27,32,42,Chad,99,TCD
+28,33,43,Chile,2261,CHL
+29,34,44,China,221,CHN
+30,35,45,Colombia,7905,COL
+31,38,49,Costa Rica,56,CRI
+32,39,50,Croatia,55,HRV
+33,40,51,Cuba,21,CUB
+34,41,53,Cyprus,112,CYP
+35,43,55,Denmark,37,DNK
+36,44,56,Djibouti,22,DJI
+37,45,57,Dominica,2,DMA
+38,47,59,Ecuador,215,ECU
+39,48,60,Egypt,2055,EGY
+40,49,61,El Salvador,5227,SLV
+41,50,62,Equatorial Guinea,2,GNQ
+42,51,63,Eritrea,10,ERI
+43,52,64,Estonia,16,EST
+44,53,65,Ethiopia,191,ETH
+45,55,67,Fiji,16,FJI
+46,56,68,Finland,20,FIN
+47,57,69,France,2493,FRA
+48,58,70,French Guiana,6,GUF
+49,59,71,French Polynesia,3,PYF
+50,60,72,Gabon,6,GAB
+51,62,74,Georgia,193,GEO
+52,63,75,Germany,681,DEU
+53,64,76,Ghana,17,GHA
+54,65,78,Greece,1152,GRC
+55,66,80,Grenada,3,GRD
+56,67,81,Guadeloupe,47,GLP
+57,68,83,Guatemala,1937,GTM
+58,69,84,Guinea,22,GIN
+59,70,85,Guinea-Bissau,8,GNB
+60,71,86,Guyana,19,GUY
+61,72,87,Haiti,189,HTI
+62,73,88,Honduras,286,HND
+63,74,89,Hong Kong,20,HKG
+64,75,90,Hungary,40,HUN
+65,76,91,Iceland,4,ISL
+66,77,92,India,10952,IND
+67,78,93,Indonesia,704,IDN
+68,80,95,Iraq,23041,IRQ
+69,81,96,Ireland,141,IRL
+70,82,97,Israel,1589,ISR
+71,83,98,Italy,1403,ITA
+72,85,100,Jamaica,32,JAM
+73,86,101,Japan,341,JPN
+74,87,102,Jordan,86,JOR
+75,88,103,Kazakhstan,22,KAZ
+76,89,104,Kenya,654,KEN
+77,90,106,Kuwait,63,KWT
+78,91,107,Kyrgyzstan,29,KGZ
+79,93,109,Latvia,13,LVA
+80,94,110,Lebanon,2185,LBN
+81,95,111,Lesotho,25,LSO
+82,96,112,Liberia,32,LBR
+83,97,113,Libya,2130,LBY
+84,98,115,Lithuania,8,LTU
+85,99,116,Luxembourg,14,LUX
+86,102,119,Madagascar,23,MDG
+87,103,120,Malawi,6,MWI
+88,104,121,Malaysia,91,MYS
+89,105,122,Maldives,20,MDV
+90,106,123,Mali,681,MLI
+91,107,124,Malta,22,MLT
+92,108,127,Martinique,12,MTQ
+93,109,128,Mauritania,15,MRT
+94,110,129,Mauritius,0,MUS
+95,111,130,Mexico,504,MEX
+96,113,136,Morocco,34,MAR
+97,114,137,Mozambique,411,MOZ
+98,115,138,Myanmar,548,MMR
+99,116,139,Namibia,147,NAM
+100,117,141,Nepal,1013,NPL
+101,119,143,New Caledonia,47,NCL
+102,120,144,New Zealand,11,NZL
+103,121,145,Nicaragua,1946,NIC
+104,123,147,Nigeria,4190,NGA
+105,125,151,Norway,16,NOR
+106,126,153,Pakistan,13003,PAK
+107,128,156,Panama,110,PAN
+108,129,157,Papua New Guinea,77,PNG
+109,130,158,Paraguay,105,PRY
+110,131,159,Peru,5767,PER
+111,133,161,Poland,35,POL
+112,134,162,Portugal,129,PRT
+113,135,164,Qatar,6,QAT
+114,136,166,Romania,4,ROU
+115,138,168,Rwanda,159,RWA
+116,139,173,Saudi Arabia,343,SAU
+117,140,174,Senegal,119,SEN
+118,142,176,Seychelles,2,SYC
+119,143,177,Sierra Leone,98,SLE
+120,144,178,Singapore,7,SGP
+121,146,180,Slovenia,6,SVN
+122,147,181,Solomon Islands,4,SLB
+123,148,182,Somalia,4274,SOM
+124,149,183,South Africa,1911,ZAF
+125,151,185,Spain,2819,ESP
+126,152,186,Sri Lanka,2853,LKA
+127,156,196,Suriname,61,SUR
+128,158,198,Sweden,117,SWE
+129,159,199,Switzerland,91,CHE
+130,162,202,Tajikistan,183,TJK
+131,164,204,Togo,42,TGO
+132,165,205,Thailand,3774,THA
+133,166,207,Trinidad and Tobago,20,TTO
+134,167,208,Tunisia,114,TUN
+135,168,209,Turkey,4003,TUR
+136,169,210,Turkmenistan,1,TKM
+137,170,213,Uganda,372,UGA
+138,171,214,Ukraine,1563,UKR
+139,174,218,Uruguay,71,URY
+140,175,219,Uzbekistan,19,UZB
+141,176,220,Vanuatu,2,VUT
+142,180,226,Wallis and Futuna,1,WLF
+143,181,228,Yemen,3073,YEM
+144,183,230,Zambia,58,ZMB
+145,184,231,Zimbabwe,97,ZWE
+146,188,349,Western Sahara,6,ESH
+147,198,603,United Kingdom,4280,GBR
+148,201,1001,Serbia,12,SRB
+149,202,1002,Montenegro,7,MNE
+150,204,1004,South Sudan,223,SSD

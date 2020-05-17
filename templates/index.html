@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Load d3.js -->
+<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://bl.ocks.org/syntagmatic/raw/3341641/render-queue.js"></script>
+<script src = "{{ url_for('static', filename='d3-tip.js')}}"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style.css') }}">
+</head>
+<body>
+<!-- Create an element where the map will take place -->
+<div id="mapdiv"></div>
+
+<div id="para" style="width:960px;height:300px;"></div>
+
+<script src = "{{ url_for('static', filename='map.js')}}"></script>
+<script src = "{{ url_for('static', filename='para.js')}}"></script>
+<style src = "{{ url_for('static', filename='style.css')}}"></style>
+
+</body>
+</html>
