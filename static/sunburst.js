@@ -190,7 +190,7 @@ console.log(root);
          .outerRadius(function(d, i) {
            return arcMin + (i+1)*(arcWidth);
          })
-         .startAngle(0 * (PI/180))
+         .startAngle(0 * (Math.PI/180))
          .endAngle(function(d, i) {
            return Math.floor((d*6 * (PI/180))*1000)/1000;
          });

@@ -12,9 +12,12 @@
 // {"weaptype1_txt":"Vehicle (not to include vehicle-borne explosives, i.e., car or truck bombs)","count":153}];
 var text = "";
 
-var datapie = JSON.parse(datapie)
 
-
+function drawpie(error,db){
+  if (error) throw error;
+  console.log("yeh db",db);
+  datapie= JSON.parse(db);
+  console.log("inside!");
 var widthpie = 500;
 var heightpie= 200;
 var thicknesspie = 40;
@@ -121,7 +124,7 @@ var pathpie = g1.selectAll('path')
   })
   .each(function(d, i) { this._current = i; });
 
-let legend = d3.select("#chart").append('div')
+let legend = d3.select("#piechartlegend").append('div')
 			.attr('class', 'legend')
 			.style('margin-top', '30px');
 
@@ -145,3 +148,10 @@ let keys = legend.selectAll('.key')
 			.text(d => `${d.weaptype1_txt} (${d.count})`);
 
     keys.exit().remove();
+}
+// var pieglobal = d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All");
+d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All")
+.await(drawpie);
+console.log("hello!");
+//call for first run
+// drawpie(JSON.parse(pieglobal._data[0]));

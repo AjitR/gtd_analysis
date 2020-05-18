@@ -86,6 +86,10 @@ function ready(error, topo) {
     console.log(d.id)
     console.log(d)  
     console.log(d.properties.name)
+    country=d.properties.name
+    var newdata = d3.queue().defer(d3.json, "/getDataPerCountryPie?country=" + d.properties.name);
+  
+    drawpie(newdata);
       
   }
 
@@ -116,6 +120,7 @@ function ready(error, topo) {
 
     function clickevent(d){
       console.log(d);
+      
     }
 
     function clicked(d) {
