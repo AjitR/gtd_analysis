@@ -155,7 +155,7 @@ function drawsunburst(error,db1){
    svg.append("text")
       .attr("class", "total")
       .attr("text-anchor", "middle")
-        .attr('font-size', '4em')
+        .attr('font-size', '2em')
         .attr('y', 20)
       .text(total);
    

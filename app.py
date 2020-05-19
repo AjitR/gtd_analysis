@@ -18,10 +18,15 @@ def d3():
   
     return render_template('index2.html')
 
-#get a country's data
+#get a country's data- pie
 def dfbycountry(countrycode):
-    dfcountry= dfyear.loc[df2['code'] ==countrycode] 
+    dfcountry= df2.loc[df2['code'] ==countrycode] 
     return dfcountry
+
+#get country's data - sun
+def dfbycountrysun(countrycode):
+    dfc1= dfyear.loc[dfyear['code'] ==countrycode] 
+    return dfc1
 
 #pie data
 @app.route('/getDataPerCountryPie')
@@ -75,15 +80,15 @@ def getDataSun():
         sundata = json.dumps(output)
         return sundata
     else:
-        dfy= dfbycountry(dfyear)
+        dfy= dfbycountrysun(country)
         dfk1=dfy.groupby(['iyear','attacktype1_txt'])['nkill'].sum().reset_index(name="kill total")
         dfk1.to_csv("year_attack1.csv")
-        results = defaultdict(lambda: defaultdict(dict))
+        results1 = defaultdict(lambda: defaultdict(dict))
 
         #nested dictionary
         with open('year_attack1.csv') as csv_file:
             for val in csv.DictReader(csv_file):
-                results[val['iyear']][val['attacktype1_txt']] = (float(val['kill total']))
+                results1[val['iyear']][val['attacktype1_txt']] = (float(val['kill total']))
 
         #json object
         output1 = {  'name': 'TOTAL','children': []}
@@ -91,10 +96,10 @@ def getDataSun():
         
         children2=[]
 
-        for k1,v1 in results.items(): 
+        for k1,v1 in results1.items(): 
                 
                 for k2,v2 in v1.items():
-                    children1.append({'name':k2,'size':float(v2)})
+                    children2.append({'name':k2,'size':float(v2)})
                 
                 output1['children'].append({
                     'name':k1,
