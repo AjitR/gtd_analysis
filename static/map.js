@@ -170,3 +170,5 @@ d3.queue().defer(d3.json, "/getTextData?country=All")
     function stopped() {
       if (d3.event.defaultPrevented) d3.event.stopPropagation();
     }
+
+  saveSvgAsPng(document.getElementsByTagName("svg")[0], "plotmap.png");

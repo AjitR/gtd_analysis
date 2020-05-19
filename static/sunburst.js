@@ -1,5 +1,7 @@
 
 function drawsunburst(error,db1){
+
+  var margin = {top: 115, right: 45, bottom: 30, left: 40};
   if (error) throw error;
   // root=db;
 
@@ -9,8 +11,8 @@ function drawsunburst(error,db1){
   d3.select("#sunburst svg").remove();
   d3.select("#legend div").remove();
    var width = 300,
-       height = 250,
-       radius = (Math.min(width, height) / 2) - 10; 
+       height =  200,
+       radius = (Math.min(width, height) / 2) ; 
    var color = d3.scaleOrdinal(d3.schemeOranges[7]);
   
    var legendRectSize = 15; 
@@ -63,13 +65,18 @@ function drawsunburst(error,db1){
    var svg = d3.select("#sunburst").append("svg")
        .attr("width", width) 
        .attr("height", height) 
+       .attr("align","center")
      .append("g") 
-       .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
+       .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
    
-   
-
-
-
+       svg.append("text")
+       .attr("x", (radius/2 ))             
+       .attr("y", 0 - (margin.top))
+       .attr("text-anchor", "middle")  
+       .style("font-size", "16px")
+       .style("fill","#ccc") 
+       .style("text-decoration", "underline")  
+       .text("Yearly attacks for 2014-18");
 
 
    var path = svg.selectAll("path")
@@ -146,8 +153,6 @@ function drawsunburst(error,db1){
          return d.size; 
        });
      
-  
-     
        redraw(enabledCategory)
               
      
@@ -162,6 +167,7 @@ function drawsunburst(error,db1){
       .attr("text-anchor", "middle")
         .attr('font-size', '2em')
         .attr('y', 20)
+        .style("fill","	#FFA500") 
       .text(total);
    
    

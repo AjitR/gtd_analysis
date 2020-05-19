@@ -23,12 +23,12 @@ var x = d3.scaleLinear()
 // append the svg object to the body of the page
 // append a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
-var svg = d3.select("#barchart").append("svg")
+var svgbar = d3.select("#barchart").append("svg")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
 .attr("transform", 
-      "translate(" + margin.left + "," + margin.top + ")");
+      "translate(" + margin.left + "," + margin.top*1.5 + ")");
 
 // format the data
 data.forEach(function(d) {
@@ -41,7 +41,7 @@ y.domain(data.map(function(d) { return d.weaptype1_txt; }));
 //y.domain([0, d3.max(data, function(d) { return d.sales; })]);
 
 // append the rectangles for the bar chart
-svg.selectAll(".bar")
+svgbar.selectAll(".bar")
   .data(data)
 .enter().append("rect")
     .transition()
@@ -54,7 +54,7 @@ svg.selectAll(".bar")
   .attr("fill","#f79862");
 
 // add the x Axis
-svg.append("g")
+svgbar.append("g")
   .attr("transform", "translate(0," + height + ")")
   .attr("fill","#ccc")
   .attr("text","#ccc")
@@ -66,7 +66,15 @@ svg.append("g")
         .attr("transform", "rotate(-65)");
 
 // add the y Axis
-svg.append("g")
+svgbar.append("g")
   .call(d3.axisLeft(y));
 }
 
+svgbar.append("text")
+.attr("x", (width / 2))             
+.attr("y", 0 - (margin.top)+10)
+.attr("text-anchor", "middle")  
+.style("font-size", "16px")
+.style("fill","#ccc") 
+.style("text-decoration", "underline")  
+.text("Which weapons were used?");

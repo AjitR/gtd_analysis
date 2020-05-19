@@ -34,12 +34,17 @@ def getDataPerCountryPie():
     country = request.args.get('country', type=str)
     if country=='All':
         countdf=df2.groupby('success')['success'].count().reset_index(name="count")
+        countdf["success"]= countdf["success"].astype(str)
+        countdf["success"].replace({"0": "Fail", "1": "Success"}, inplace=True)
+
         piedata= countdf.to_json(orient='records')
         piedata = json.dumps(piedata, indent=2)
         return piedata
     else:
         countdf1= dfbycountry(country)
         countdf1=countdf1.groupby('success')['success'].count().reset_index(name="count")
+        countdf1["success"]= countdf1["success"].astype(str)
+        countdf1["success"].replace({"0": "Fail", "1": "Success"}, inplace=True)
         piedata1= countdf1.to_json(orient='records')
         piedata1 = json.dumps(piedata1, indent=2)
         return piedata1
@@ -63,10 +68,10 @@ def getDataSun():
         output = {  'name': 'TOTAL','children': []}
 
         
-        children1=[]
+        
 
         for k1,v1 in results.items(): 
-                
+                children1=[]
                 for k2,v2 in v1.items():
                     children1.append({'name':k2,'size':float(v2)})
                 
@@ -94,10 +99,10 @@ def getDataSun():
         output1 = {  'name': 'TOTAL','children': []}
 
         
-        children2=[]
+        
 
         for k1,v1 in results1.items(): 
-                
+                children2=[]
                 for k2,v2 in v1.items():
                     children2.append({'name':k2,'size':float(v2)})
                 
