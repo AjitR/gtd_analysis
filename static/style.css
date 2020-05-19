@@ -250,10 +250,11 @@ body {
           height: auto;
           padding: 10px;
         display: none;
-          background-color: white;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: #69ff93;
           -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
-          border-radius: 10px;
+          border-radius: 1px;
           -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
           -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
@@ -262,9 +263,11 @@ body {
                   
       div.tooltip p {
           margin: 0;
-          font-family: Arial;
+          font-family:"avenir next", Arial, sans-serif;
           font-size: 16px;
-          line-height: 20px;
+          
+          line-height: 1.5;
+        font-weight: 400;
       } 
       
       .legend {

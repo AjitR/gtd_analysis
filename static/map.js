@@ -90,6 +90,8 @@ function ready(error, topo) {
     d3.queue().defer(d3.json, "/getDataSun?country="+country1)
     .await(drawsunburst);
     d3.queue().defer(d3.json, "/getDataPerCountryBar?country=" + country1).await(updatebarchart);
+
+    d3.queue().defer(d3.json, "/getTextData?country=" + country1).await(drawtext);
   }
 
   // Draw the map
@@ -153,6 +155,9 @@ d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All")
 
 d3.queue().defer(d3.json, "/getDataSun?country=All")
 .await(drawsunburst);
+
+d3.queue().defer(d3.json, "/getTextData?country=All")
+.await(drawtext);
 
       active.classed("active", false);
       active = d3.select(null);

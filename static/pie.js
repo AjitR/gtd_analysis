@@ -24,7 +24,7 @@ d3.select("#piechartlegend div").remove();
 
 // document.getElementById("#piechartlegend").remove();
 var widthpie = 300;
-var heightpie= 240;
+var heightpie= 220;
 var thicknesspie = 40;
 var durationpie = 750;
 var paddingpie = 0;
@@ -34,6 +34,7 @@ var otherOpacityOnHoverpie = .8;
 var tooltipMarginpie = 0;
 
 var radius = Math.min(widthpie-paddingpie, heightpie-paddingpie) / 2;
+radius = radius - 15;
 var color = d3.scaleOrdinal().domain(datapie)
   .range(d3.schemeOranges[7]);
 
@@ -43,8 +44,19 @@ var svg3 = d3.select("#piechart")
 .attr('width', widthpie)
 .attr('height', heightpie);
 
+
+
+svg3.append("text")
+.attr("x", (widthpie / 2))             
+.attr("y", 15 )
+.attr("text-anchor", "middle")  
+.style("font-size", "16px")
+.style("fill","#ccc") 
+.style("text-decoration", "underline")  
+.text("Was the attack successful?");
+
 var g1 = svg3.append('g')
-.attr('transform', 'translate(' + (widthpie/2) + ',' + (heightpie/2) + ')');
+.attr('transform', 'translate(' + (widthpie/2) + ',' + ((heightpie+30)/2) + ')');
 
 var arc = d3.arc()
 .innerRadius(0)

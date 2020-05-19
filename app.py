@@ -128,6 +128,22 @@ def getDataPerCountryBar():
     return bardata  
 
 
+@app.route('/getTextData')
+def getTextData():
+    country = request.args.get('country', type=str)
+    if country=="All":
+        incidents = df2.shape[0]
+        casulties = int(df2['nkill'].sum())
+        wounded = int(df2['nwound'].sum())
+    else:
+        countryspecificdf = dfbycountry(country)
+        incidents = countryspecificdf.shape[0]
+        casulties = int(countryspecificdf['nkill'].sum())
+        wounded = int(countryspecificdf['nwound'].sum())
+    
+    textdata = {"incidents":incidents, "casulties":casulties, "wounded":wounded}
+    print (textdata)
+    return json.dumps(textdata)    
 
 if __name__ == "__main__":
     app.run( debug=True)

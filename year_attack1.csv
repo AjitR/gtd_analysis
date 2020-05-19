@@ -1,25 +1,34 @@
 ,iyear,attacktype1_txt,kill total
-0,2015,Armed Assault,17.0
-1,2015,Assassination,2.0
-2,2015,Bombing/Explosion,2.0
+0,2015,Armed Assault,517.0
+1,2015,Assassination,88.0
+2,2015,Bombing/Explosion,321.0
 3,2015,Facility/Infrastructure Attack,0.0
-4,2016,Armed Assault,42.0
-5,2016,Assassination,3.0
-6,2016,Bombing/Explosion,16.0
-7,2016,Facility/Infrastructure Attack,0.0
-8,2016,Hostage Taking (Barricade Incident),0.0
-9,2016,Hostage Taking (Kidnapping),1.0
-10,2016,Unarmed Assault,0.0
-11,2016,Unknown,2.0
-12,2017,Armed Assault,38.0
-13,2017,Assassination,1.0
-14,2017,Bombing/Explosion,22.0
-15,2017,Facility/Infrastructure Attack,0.0
-16,2017,Unarmed Assault,0.0
-17,2018,Armed Assault,13.0
-18,2018,Assassination,1.0
-19,2018,Bombing/Explosion,2.0
-20,2018,Facility/Infrastructure Attack,0.0
-21,2018,Hostage Taking (Barricade Incident),7.0
-22,2018,Hostage Taking (Kidnapping),0.0
-23,2018,Unarmed Assault,0.0
+4,2015,Hijacking,1.0
+5,2015,Hostage Taking (Barricade Incident),39.0
+6,2015,Hostage Taking (Kidnapping),217.0
+7,2015,Unknown,272.0
+8,2016,Armed Assault,405.0
+9,2016,Assassination,130.0
+10,2016,Bombing/Explosion,679.0
+11,2016,Facility/Infrastructure Attack,0.0
+12,2016,Hijacking,3.0
+13,2016,Hostage Taking (Barricade Incident),50.0
+14,2016,Hostage Taking (Kidnapping),239.0
+15,2016,Unknown,77.0
+16,2017,Armed Assault,249.0
+17,2017,Assassination,129.0
+18,2017,Bombing/Explosion,1313.0
+19,2017,Facility/Infrastructure Attack,2.0
+20,2017,Hijacking,0.0
+21,2017,Hostage Taking (Barricade Incident),38.0
+22,2017,Hostage Taking (Kidnapping),120.0
+23,2017,Unarmed Assault,32.0
+24,2017,Unknown,31.0
+25,2018,Armed Assault,298.0
+26,2018,Assassination,75.0
+27,2018,Bombing/Explosion,604.0
+28,2018,Facility/Infrastructure Attack,2.0
+29,2018,Hijacking,0.0
+30,2018,Hostage Taking (Barricade Incident),0.0
+31,2018,Hostage Taking (Kidnapping),49.0
+32,2018,Unknown,116.0

@@ -67,6 +67,11 @@ function drawsunburst(error,db1){
        .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
    
    
+
+
+
+
+
    var path = svg.selectAll("path")
          .data(partition(root).descendants()) 
        .enter().append("path")
