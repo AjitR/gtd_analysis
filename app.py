@@ -6,6 +6,7 @@ import json
 import csv
 import logging
 from flask import request
+from collections import defaultdict
 
 
 app = Flask(__name__)
@@ -70,18 +71,26 @@ def getDataPerCountryPie():
 def getDataSun():
     country = request.args.get('country', type=str)
     if country=='All':
-        output = {  "name": "TOTAL",
-        'children': []}
+
+        results = defaultdict(lambda: defaultdict(dict))
+        #nested dictionary
         with open('sunburst.csv') as csv_file:
             for val in csv.DictReader(csv_file):
+                results[val['attacktype1_txt']][val['targtype1_txt']] = (float(val['Time']))
+
+        #json object
+        output = {  "name": "TOTAL", 'children': []}
+        for k1,v1 in results.items(): 
+            for k2,v2 in v1.items():
                 output['children'].append({
-                    'name': val['attacktype1_txt'],
+                    'name': k1,
                     'children': 
                     [
-                    {'name':val['targtype1_txt'], 'size': float(val['Time'])}             
+                    {'name':k2, 'size': float(v2)}             
                     ]
             
                 })
+                
         
         sundata = json.dumps(output)
         return sundata
@@ -89,15 +98,23 @@ def getDataSun():
         countdf1= dfbycountry(country)
         sundf= countdf1.groupby(['targtype1_txt','attacktype1_txt']).size().reset_index(name="Time")
         sundf.to_csv("sunburst1.csv")
-        output1 = {  "name": "TOTAL",
-        'children': []}
+        results = defaultdict(lambda: defaultdict(dict))
+
+
+        #nested dictionary
         with open('sunburst1.csv') as csv_file:
             for val in csv.DictReader(csv_file):
+                results[val['attacktype1_txt']][val['targtype1_txt']] = (float(val['Time']))
+
+        #json object
+        output1 = {  "name": "TOTAL", 'children': []}
+        for k1,v1 in results.items(): 
+            for k2,v2 in v1.items():
                 output1['children'].append({
-                    'name': val['attacktype1_txt'],
+                    'name': k1,
                     'children': 
                     [
-                    {'name':val['targtype1_txt'], 'size': float(val['Time'])}             
+                    {'name':k2, 'size': float(v2)}             
                     ]
             
                 })
