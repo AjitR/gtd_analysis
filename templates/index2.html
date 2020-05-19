@@ -44,25 +44,34 @@
         </div>      
       <div class="row">
         <div class="col l3 s3">
-          <div id="piechart"></div>
-          <div id="piechartlegend"></div>
+          <div class="card-panel" style="background-color: #201a1657;">
+            
+            <div id="piechart"></div>
+            <div id="piechartlegend"></div>
+          </div>  
         </div>
         <div class="col l6 s6">
-            <div id="mapdiv"></div>
-            
+          <div class="card-panel" style="background-color: #201a1657; height: 348px;">
+            <div id="mapdiv" style="margin-left: -13px;"></div>
+            </div>
           </div>
           <div class="col l3 s3">
+            <div class="card-panel" style="background-color: #201a1657; height: 348px;">
             <div id="sunburst"></div>
-            <div id="legend"></div>
+          </div>
+            <!-- <div id="legend"></div> -->
           </div>
       </div>
       <div class="row">
         <div class="col l3 s3">
-            <h4>Pie or bar</h4>
+          <div class="card-panel" style="background-color: #201a1657; height: 348px;">
+          <div id="barchart"></div>
+        </div>
           </div>
-        <div class="col l16 s6">
+        <div class="col l19 s9">
+          <div class="card-panel" style="background-color: #201a1657;">
             <div id="para" style="width:960px;height:300px;"></div>
-            
+        </div>
           </div>
          
       </div>
@@ -77,6 +86,9 @@
   <script src = "{{ url_for('static', filename='para.js')}}"></script>
   <script src = "{{ url_for('static', filename='pie.js')}}"></script> 
   <script src = "{{ url_for('static', filename='sunburst.js')}}"></script> 
+  <script src = "{{ url_for('static', filename='barchart.js')}}"></script>
+  
+  <script src = "{{ url_for('static', filename='updatebarchart.js')}}"></script> 
   <style src = "{{ url_for('static', filename='style.css')}}"></style>
 
 <!------------------------------------------------------------------------------------------------>

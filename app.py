@@ -25,24 +25,6 @@ sundf.to_csv("sunburst.csv")
 @app.route("/")
 def d3():
   
-    # output = {  "name": "TOTAL",
-    # 'children': []}
-    # with open('attack_count.csv') as csv_file:
-    #     for val in csv.DictReader(csv_file):
-    #         output['children'].append({
-    #             'name': val['attacktype1_txt'],
-    #             'children': 
-    #             [
-    #             {'name':'nkill', 'size': float(val['nkill'])},
-    #             {'name':'nwound', 'size': float(val['nwound'])},
-                             
-    #             ]
-           
-    #         })
-
-    
-    
-
     return render_template('index2.html')
 
 
@@ -123,7 +105,20 @@ def getDataSun():
         return sundata1
 
 
+@app.route('/getDataPerCountryBar')
+def getDataPerCountryBar():
+    country = request.args.get('country', type=str)
+    if country=='All':
+        df3=df2.groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
+    else:
+        print("insode app country selected is"+country)
+        df3=df2.loc[df2['country_txt']==country].groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
+    
+    bardata= df3.to_json(orient='records')
+    bardata = json.dumps(bardata, indent=2)
 
+    #print("final bar data is " + bardata)    
+    return bardata  
 
 
 

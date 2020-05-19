@@ -1,6 +1,6 @@
-var margin = {top: 66, right: 110, bottom: 20, left: 100},
-    width = 960 - margin.left - margin.right,
-    height = 340 - margin.top - margin.bottom,
+var margin = {top: 46, right: 110, bottom: 20, left: 100},
+    width = 940 - margin.left - margin.right,
+    height = 320 - margin.top - margin.bottom,
     innerHeight = height - 2;
 
 var devicePixelRatio = window.devicePixelRatio || 1;

@@ -175,7 +175,7 @@ body {
 
 
       .pie {
-        margin: 20px;
+        margin: 0px;
       }
       
       svg {
@@ -274,4 +274,4 @@ body {
       
       .chart-1 {
         width: 33%;
-      }      
+      }     

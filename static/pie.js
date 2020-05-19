@@ -23,15 +23,15 @@ d3.select("#piechart svg").remove();
 d3.select("#piechartlegend div").remove();
 
 // document.getElementById("#piechartlegend").remove();
-var widthpie = 500;
-var heightpie= 200;
+var widthpie = 300;
+var heightpie= 240;
 var thicknesspie = 40;
 var durationpie = 750;
-var paddingpie = 10;
+var paddingpie = 0;
 var opacitypie = .8;
 var opacityHoverpie = 1;
 var otherOpacityOnHoverpie = .8;
-var tooltipMarginpie = 13;
+var tooltipMarginpie = 0;
 
 var radius = Math.min(widthpie-paddingpie, heightpie-paddingpie) / 2;
 var color = d3.scaleOrdinal().domain(datapie)

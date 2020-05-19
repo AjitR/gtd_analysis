@@ -1,11 +1,11 @@
 
-var width2 = 640 ,
-height2 = 300
+var width2 = 600 ,
+height2 = 320
 active = d3.select(null);
 
 
 var projection = d3.geoMercator()
-  .scale(100)
+  .scale(120)
   .center([0,20])
   .translate([width2 / 2, height2 / 2]);
 
@@ -82,16 +82,14 @@ function ready(error, topo) {
   }
 
   let clickevent = function(d){
-    console.log("clicked on country - ")
-    console.log(d.id)
-    console.log(d)  
-    console.log(d.properties.name)
+
     country=d.id
     country1= country.toString()
     d3.queue().defer(d3.json, "/getDataPerCountryPie?country="+country1)
     .await(drawpie);
     d3.queue().defer(d3.json, "/getDataSun?country="+country1)
     .await(drawsunburst);
+    d3.queue().defer(d3.json, "/getDataPerCountryBar?country=" + d.properties.name).await(updatebarchart);
   }
 
   // Draw the map
@@ -119,10 +117,7 @@ function ready(error, topo) {
       .on("click", clickevent );
     }
 
-    function clickevent(d){
-      console.log(d);
-      
-    }
+
 
     function clicked(d) {
       if (active.node() === this) return reset();

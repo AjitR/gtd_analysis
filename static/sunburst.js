@@ -5,8 +5,8 @@ function drawsunburst(error,db){
 
   d3.select("#sunburst svg").remove();
   d3.select("#legend div").remove();
-   var width = 325,
-       height = 325,
+   var width = 300,
+       height = 250,
        radius = (Math.min(width, height) / 2) - 10; 
    var color = d3.scaleOrdinal(d3.schemeOranges[9]);
   
