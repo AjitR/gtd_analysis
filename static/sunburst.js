@@ -1,14 +1,17 @@
 
-function drawsunburst(error,db){
+function drawsunburst(error,db1){
   if (error) throw error;
-  root=db;
+  // root=db;
+
+  var root = db1;
+  console.log("root",root);
 
   d3.select("#sunburst svg").remove();
   d3.select("#legend div").remove();
    var width = 300,
        height = 250,
        radius = (Math.min(width, height) / 2) - 10; 
-   var color = d3.scaleOrdinal(d3.schemeOranges[9]);
+   var color = d3.scaleOrdinal(d3.schemeOranges[7]);
   
    var legendRectSize = 15; 
    var legendSpacing = 6; 

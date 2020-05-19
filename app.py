@@ -12,24 +12,15 @@ from collections import defaultdict
 app = Flask(__name__)
 
 df2 = pd.read_csv(r'data/gtd_code.csv')
-sun= pd.read_csv(r"data/out_sun.csv")
-indexNames = sun[ sun['success'] == 0 ].index
-
-sun.drop(indexNames , inplace=True)
-sun1=sun.groupby(['attacktype1_txt'])['nkill','nwound'].sum()
-sun1.to_csv("attack_count.csv")
-
-#sunburst data
-sundf= df2.groupby(['targtype1_txt','attacktype1_txt']).size().reset_index(name="Time")
-sundf.to_csv("sunburst.csv")
+dfyear= pd.read_csv("data/df2015-18.csv")
 @app.route("/")
 def d3():
   
     return render_template('index2.html')
 
-
+#get a country's data
 def dfbycountry(countrycode):
-    dfcountry= df2.loc[df2['code'] ==countrycode] 
+    dfcountry= dfyear.loc[df2['code'] ==countrycode] 
     return dfcountry
 
 #pie data
@@ -52,55 +43,65 @@ def getDataPerCountryPie():
 @app.route('/getDataSun')
 def getDataSun():
     country = request.args.get('country', type=str)
+    #sun data
+    
+    dfk=dfyear.groupby(['iyear','attacktype1_txt'])['nkill'].sum().reset_index(name="kill total")
+    dfk.to_csv("year_attack.csv")
     if country=='All':
-
+        #dictionary
         results = defaultdict(lambda: defaultdict(dict))
-        #nested dictionary
-        with open('sunburst.csv') as csv_file:
+        with open('year_attack.csv') as csv_file:
             for val in csv.DictReader(csv_file):
-                results[val['attacktype1_txt']][val['targtype1_txt']] = (float(val['Time']))
+                results[val['iyear']][val['attacktype1_txt']] = (float(val['kill total']))
 
-        #json object
-        output = {  "name": "TOTAL", 'children': []}
+        
+        output = {  'name': 'TOTAL','children': []}
+
+        
+        children1=[]
+
         for k1,v1 in results.items(): 
-            for k2,v2 in v1.items():
-                output['children'].append({
-                    'name': k1,
-                    'children': 
-                    [
-                    {'name':k2, 'size': float(v2)}             
-                    ]
-            
-                })
                 
+                for k2,v2 in v1.items():
+                    children1.append({'name':k2,'size':float(v2)})
+                
+                output['children'].append({
+                    'name':k1,
+                    'children':children1
+                    
+                    
+                })
         
         sundata = json.dumps(output)
         return sundata
     else:
-        countdf1= dfbycountry(country)
-        sundf= countdf1.groupby(['targtype1_txt','attacktype1_txt']).size().reset_index(name="Time")
-        sundf.to_csv("sunburst1.csv")
+        dfy= dfbycountry(dfyear)
+        dfk1=dfy.groupby(['iyear','attacktype1_txt'])['nkill'].sum().reset_index(name="kill total")
+        dfk1.to_csv("year_attack1.csv")
         results = defaultdict(lambda: defaultdict(dict))
 
-
         #nested dictionary
-        with open('sunburst1.csv') as csv_file:
+        with open('year_attack1.csv') as csv_file:
             for val in csv.DictReader(csv_file):
-                results[val['attacktype1_txt']][val['targtype1_txt']] = (float(val['Time']))
+                results[val['iyear']][val['attacktype1_txt']] = (float(val['kill total']))
 
         #json object
-        output1 = {  "name": "TOTAL", 'children': []}
-        for k1,v1 in results.items(): 
-            for k2,v2 in v1.items():
-                output1['children'].append({
-                    'name': k1,
-                    'children': 
-                    [
-                    {'name':k2, 'size': float(v2)}             
-                    ]
-            
-                })
+        output1 = {  'name': 'TOTAL','children': []}
+
         
+        children2=[]
+
+        for k1,v1 in results.items(): 
+                
+                for k2,v2 in v1.items():
+                    children1.append({'name':k2,'size':float(v2)})
+                
+                output1['children'].append({
+                    'name':k1,
+                    'children':children2
+                    
+                    
+                })
         sundata1 = json.dumps(output1)
         return sundata1
 
