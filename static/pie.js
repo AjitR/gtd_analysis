@@ -157,6 +157,6 @@ let keys = legend.selectAll('.key')
 // var pieglobal = d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All");
 d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All")
 .await(drawpie);
-console.log("hello!");
+//console.log("hello!");
 //call for first run
 // drawpie(JSON.parse(pieglobal._data[0]));
