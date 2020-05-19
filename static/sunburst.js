@@ -4,7 +4,7 @@ function drawsunburst(error,db){
   root=db;
 
   d3.select("#sunburst svg").remove();
-  
+  d3.select("#legend div").remove();
    var width = 325,
        height = 325,
        radius = (Math.min(width, height) / 2) - 10; 

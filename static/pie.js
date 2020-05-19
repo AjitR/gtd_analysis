@@ -20,7 +20,7 @@ datapie=JSON.parse(db);
 console.log("datapie",datapie);
 
 d3.select("#piechart svg").remove();
-// d3.select("#piechartlegend svg").remove();
+d3.select("#piechartlegend div").remove();
 
 // document.getElementById("#piechartlegend").remove();
 var widthpie = 500;

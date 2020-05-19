@@ -1,19 +1,116 @@
 ,targtype1_txt,attacktype1_txt,Time
-0,Business,Assassination,1
-1,Business,Bombing/Explosion,9
-2,Educational Institution,Bombing/Explosion,1
-3,Educational Institution,Unarmed Assault,1
-4,Educational Institution,Unknown,1
-5,Government (Diplomatic),Armed Assault,1
-6,Government (Diplomatic),Assassination,1
-7,Government (Diplomatic),Bombing/Explosion,2
-8,Government (General),Assassination,3
-9,Maritime,Armed Assault,2
-10,Maritime,Hijacking,1
-11,Military,Unknown,5
-12,Police,Bombing/Explosion,2
-13,Private Citizens & Property,Assassination,1
-14,Private Citizens & Property,Bombing/Explosion,2
-15,Private Citizens & Property,Hostage Taking (Kidnapping),2
-16,Tourists,Bombing/Explosion,1
-17,Tourists,Hostage Taking (Kidnapping),1
+0,Abortion Related,Armed Assault,7
+1,Abortion Related,Assassination,5
+2,Abortion Related,Bombing/Explosion,48
+3,Abortion Related,Facility/Infrastructure Attack,191
+4,Abortion Related,Hostage Taking (Barricade Incident),1
+5,Abortion Related,Hostage Taking (Kidnapping),1
+6,Abortion Related,Unarmed Assault,2
+7,Airports & Aircraft,Armed Assault,6
+8,Airports & Aircraft,Bombing/Explosion,35
+9,Airports & Aircraft,Facility/Infrastructure Attack,3
+10,Airports & Aircraft,Hijacking,10
+11,Business,Armed Assault,52
+12,Business,Assassination,5
+13,Business,Bombing/Explosion,448
+14,Business,Facility/Infrastructure Attack,230
+15,Business,Hijacking,1
+16,Business,Hostage Taking (Barricade Incident),50
+17,Business,Hostage Taking (Kidnapping),2
+18,Business,Unarmed Assault,7
+19,Business,Unknown,4
+20,Educational Institution,Armed Assault,6
+21,Educational Institution,Assassination,3
+22,Educational Institution,Bombing/Explosion,78
+23,Educational Institution,Facility/Infrastructure Attack,73
+24,Educational Institution,Hostage Taking (Barricade Incident),2
+25,Educational Institution,Hostage Taking (Kidnapping),1
+26,Educational Institution,Unarmed Assault,12
+27,Food or Water Supply,Bombing/Explosion,4
+28,Food or Water Supply,Facility/Infrastructure Attack,2
+29,Food or Water Supply,Unarmed Assault,1
+30,Government (Diplomatic),Armed Assault,21
+31,Government (Diplomatic),Assassination,16
+32,Government (Diplomatic),Bombing/Explosion,94
+33,Government (Diplomatic),Facility/Infrastructure Attack,13
+34,Government (Diplomatic),Hostage Taking (Barricade Incident),3
+35,Government (Diplomatic),Unknown,1
+36,Government (General),Armed Assault,10
+37,Government (General),Assassination,23
+38,Government (General),Bombing/Explosion,197
+39,Government (General),Facility/Infrastructure Attack,81
+40,Government (General),Hijacking,1
+41,Government (General),Hostage Taking (Barricade Incident),1
+42,Government (General),Hostage Taking (Kidnapping),4
+43,Government (General),Unarmed Assault,18
+44,Government (General),Unknown,4
+45,Journalists & Media,Armed Assault,2
+46,Journalists & Media,Assassination,13
+47,Journalists & Media,Bombing/Explosion,23
+48,Journalists & Media,Facility/Infrastructure Attack,16
+49,Journalists & Media,Hostage Taking (Barricade Incident),2
+50,Journalists & Media,Hostage Taking (Kidnapping),1
+51,Journalists & Media,Unarmed Assault,5
+52,Maritime,Armed Assault,1
+53,Maritime,Bombing/Explosion,5
+54,Maritime,Facility/Infrastructure Attack,1
+55,Military,Armed Assault,10
+56,Military,Assassination,6
+57,Military,Bombing/Explosion,109
+58,Military,Facility/Infrastructure Attack,60
+59,Military,Hijacking,1
+60,Military,Hostage Taking (Barricade Incident),1
+61,Military,Hostage Taking (Kidnapping),2
+62,NGO,Armed Assault,2
+63,NGO,Assassination,2
+64,NGO,Bombing/Explosion,7
+65,NGO,Facility/Infrastructure Attack,17
+66,Other,Facility/Infrastructure Attack,2
+67,Police,Armed Assault,67
+68,Police,Assassination,7
+69,Police,Bombing/Explosion,81
+70,Police,Facility/Infrastructure Attack,14
+71,Police,Hostage Taking (Kidnapping),1
+72,Police,Unarmed Assault,3
+73,Police,Unknown,1
+74,Private Citizens & Property,Armed Assault,98
+75,Private Citizens & Property,Assassination,40
+76,Private Citizens & Property,Bombing/Explosion,133
+77,Private Citizens & Property,Facility/Infrastructure Attack,67
+78,Private Citizens & Property,Hijacking,3
+79,Private Citizens & Property,Hostage Taking (Barricade Incident),2
+80,Private Citizens & Property,Hostage Taking (Kidnapping),8
+81,Private Citizens & Property,Unarmed Assault,15
+82,Religious Figures/Institutions,Armed Assault,27
+83,Religious Figures/Institutions,Assassination,8
+84,Religious Figures/Institutions,Bombing/Explosion,39
+85,Religious Figures/Institutions,Facility/Infrastructure Attack,91
+86,Religious Figures/Institutions,Hostage Taking (Barricade Incident),1
+87,Religious Figures/Institutions,Hostage Taking (Kidnapping),1
+88,Religious Figures/Institutions,Unarmed Assault,2
+89,Telecommunication,Bombing/Explosion,8
+90,Telecommunication,Facility/Infrastructure Attack,2
+91,Terrorists/Non-State Militia,Armed Assault,1
+92,Terrorists/Non-State Militia,Assassination,2
+93,Terrorists/Non-State Militia,Bombing/Explosion,3
+94,Terrorists/Non-State Militia,Facility/Infrastructure Attack,1
+95,Terrorists/Non-State Militia,Unarmed Assault,1
+96,Tourists,Armed Assault,2
+97,Tourists,Bombing/Explosion,5
+98,Tourists,Facility/Infrastructure Attack,2
+99,Tourists,Unarmed Assault,1
+100,Transportation,Armed Assault,2
+101,Transportation,Bombing/Explosion,13
+102,Transportation,Facility/Infrastructure Attack,2
+103,Unknown,Assassination,1
+104,Unknown,Bombing/Explosion,9
+105,Unknown,Facility/Infrastructure Attack,1
+106,Unknown,Hijacking,1
+107,Unknown,Unarmed Assault,1
+108,Utilities,Armed Assault,2
+109,Utilities,Bombing/Explosion,68
+110,Utilities,Facility/Infrastructure Attack,17
+111,Utilities,Unknown,1
+112,Violent Political Party,Assassination,3
+113,Violent Political Party,Bombing/Explosion,1
+114,Violent Political Party,Facility/Infrastructure Attack,2
