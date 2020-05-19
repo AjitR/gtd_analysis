@@ -4,8 +4,8 @@ function drawbarchart(erorr,ddata){
     data= JSON.parse(ddata);
 
 // set the dimensions and margins of the graph
-var margin = {top: 0, right: 30, bottom: 40, left: 40},
-width = 300 - margin.left - margin.right,
+var margin = {top: 0, right: 30, bottom: 40, left: 80},
+width = 330 - margin.left - margin.right,
 height = 290 - margin.top - margin.bottom;
 
 // set the ranges
@@ -64,6 +64,10 @@ svg.append("g")
 // add the y Axis
 svg.append("g")
   .call(d3.axisLeft(y));
+
+
+  
+
 }
 
 

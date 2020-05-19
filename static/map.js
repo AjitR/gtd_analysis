@@ -1,5 +1,5 @@
 
-var width2 = 600 ,
+var width2 = 740 ,
 height2 = 320
 active = d3.select(null);
 
@@ -145,6 +145,15 @@ function ready(error, topo) {
     }
 
     function reset() {
+      d3.queue().defer(d3.json, "/getDataPerCountryBar?country=All")
+.await(updatebarchart);
+
+d3.queue().defer(d3.json, "/getDataPerCountryPie?country=All")
+.await(drawpie);
+
+d3.queue().defer(d3.json, "/getDataSun?country=All")
+.await(drawsunburst);
+
       active.classed("active", false);
       active = d3.select(null);
     
