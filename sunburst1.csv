@@ -1,47 +1,42 @@
 ,targtype1_txt,attacktype1_txt,Time
-0,Airports & Aircraft,Armed Assault,1
-1,Airports & Aircraft,Bombing/Explosion,1
-2,Airports & Aircraft,Hijacking,11
-3,Business,Armed Assault,8
-4,Business,Assassination,3
-5,Business,Bombing/Explosion,18
-6,Business,Hostage Taking (Kidnapping),2
-7,Educational Institution,Bombing/Explosion,3
-8,Educational Institution,Unarmed Assault,1
+0,Airports & Aircraft,Bombing/Explosion,11
+1,Airports & Aircraft,Hijacking,7
+2,Business,Armed Assault,5
+3,Business,Bombing/Explosion,21
+4,Business,Facility/Infrastructure Attack,3
+5,Business,Hostage Taking (Barricade Incident),1
+6,Educational Institution,Bombing/Explosion,5
+7,Food or Water Supply,Bombing/Explosion,1
+8,Government (Diplomatic),Armed Assault,2
 9,Government (Diplomatic),Assassination,1
-10,Government (Diplomatic),Bombing/Explosion,1
-11,Government (Diplomatic),Facility/Infrastructure Attack,1
-12,Government (General),Armed Assault,3
-13,Government (General),Assassination,3
-14,Government (General),Bombing/Explosion,8
-15,Government (General),Facility/Infrastructure Attack,2
-16,Government (General),Hostage Taking (Kidnapping),1
-17,Government (General),Unknown,2
-18,Journalists & Media,Armed Assault,1
-19,Journalists & Media,Unknown,1
-20,Military,Armed Assault,1
-21,Military,Assassination,1
-22,Police,Armed Assault,13
-23,Police,Assassination,2
-24,Police,Bombing/Explosion,21
-25,Police,Facility/Infrastructure Attack,1
-26,Police,Hostage Taking (Kidnapping),1
-27,Police,Unarmed Assault,2
-28,Private Citizens & Property,Armed Assault,15
-29,Private Citizens & Property,Assassination,1
-30,Private Citizens & Property,Bombing/Explosion,25
-31,Private Citizens & Property,Facility/Infrastructure Attack,2
-32,Private Citizens & Property,Hostage Taking (Kidnapping),2
-33,Private Citizens & Property,Unarmed Assault,2
-34,Private Citizens & Property,Unknown,1
-35,Religious Figures/Institutions,Assassination,1
-36,Tourists,Assassination,1
-37,Tourists,Hijacking,1
-38,Transportation,Armed Assault,4
-39,Transportation,Bombing/Explosion,75
-40,Transportation,Facility/Infrastructure Attack,1
-41,Transportation,Hijacking,1
-42,Transportation,Unarmed Assault,1
-43,Unknown,Bombing/Explosion,4
-44,Unknown,Unknown,1
-45,Utilities,Bombing/Explosion,1
+10,Government (Diplomatic),Bombing/Explosion,2
+11,Government (General),Armed Assault,1
+12,Government (General),Assassination,3
+13,Government (General),Bombing/Explosion,6
+14,Government (General),Facility/Infrastructure Attack,3
+15,Government (General),Hostage Taking (Kidnapping),1
+16,Government (General),Unknown,1
+17,Journalists & Media,Armed Assault,1
+18,Maritime,Armed Assault,1
+19,Maritime,Bombing/Explosion,1
+20,Military,Armed Assault,18
+21,Military,Assassination,2
+22,Military,Bombing/Explosion,56
+23,Military,Facility/Infrastructure Attack,2
+24,Military,Hostage Taking (Kidnapping),3
+25,Military,Unknown,6
+26,Police,Armed Assault,58
+27,Police,Assassination,2
+28,Police,Bombing/Explosion,43
+29,Police,Hostage Taking (Kidnapping),1
+30,Police,Unknown,2
+31,Private Citizens & Property,Armed Assault,11
+32,Private Citizens & Property,Bombing/Explosion,142
+33,Private Citizens & Property,Facility/Infrastructure Attack,1
+34,Private Citizens & Property,Hostage Taking (Kidnapping),1
+35,Religious Figures/Institutions,Armed Assault,2
+36,Religious Figures/Institutions,Bombing/Explosion,15
+37,Religious Figures/Institutions,Facility/Infrastructure Attack,1
+38,Tourists,Armed Assault,1
+39,Unknown,Bombing/Explosion,11
+40,Utilities,Bombing/Explosion,8

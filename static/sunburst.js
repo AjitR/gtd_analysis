@@ -8,7 +8,7 @@ function drawsunburst(error,db){
    var width = 325,
        height = 325,
        radius = (Math.min(width, height) / 2) - 10; 
-   var color = d3.scaleOrdinal(d3.schemeCategory20);
+   var color = d3.scaleOrdinal(d3.schemeOranges[9]);
   
    var legendRectSize = 15; 
    var legendSpacing = 6; 

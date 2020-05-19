@@ -35,7 +35,7 @@ var tooltipMarginpie = 13;
 
 var radius = Math.min(widthpie-paddingpie, heightpie-paddingpie) / 2;
 var color = d3.scaleOrdinal().domain(datapie)
-  .range(d3.schemeSet3);
+  .range(d3.schemeOranges[7]);
 
 var svg3 = d3.select("#piechart")
 .append('svg')
