@@ -49,7 +49,7 @@ var colorScale = d3.scaleThreshold()
 // Load external data and boot
 d3.queue()
   .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-  .defer(d3.csv, "static/countrycodecount.csv", function(d) { data.set(d.code, +d.cases); })
+  .defer(d3.csv, "static/countrycodes2015_18.csv", function(d) { data.set(d.code, +d.cases); })
   .await(ready);
 
 
@@ -170,5 +170,3 @@ d3.queue().defer(d3.json, "/getTextData?country=All")
     function stopped() {
       if (d3.event.defaultPrevented) d3.event.stopPropagation();
     }
-
-  saveSvgAsPng(document.getElementsByTagName("svg")[0], "plotmap.png");
