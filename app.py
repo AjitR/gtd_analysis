@@ -10,19 +10,16 @@ from flask import request
 
 app = Flask(__name__)
 
-df2 = pd.read_csv(r'data/out_gtd.csv')
+df2 = pd.read_csv(r'data/gtd_code.csv')
 sun= pd.read_csv(r"data/out_sun.csv")
 indexNames = sun[ sun['success'] == 0 ].index
 
 sun.drop(indexNames , inplace=True)
 sun1=sun.groupby(['attacktype1_txt'])['nkill','nwound'].sum()
 sun1.to_csv("attack_count.csv")
-@app.route("/",methods=['GET'])
+@app.route("/")
 def d3():
   
-
-    #sunburst
-
     output = {  "name": "TOTAL",
     'children': []}
     with open('attack_count.csv') as csv_file:
@@ -33,28 +30,36 @@ def d3():
                 [
                 {'name':'nkill', 'size': float(val['nkill'])},
                 {'name':'nwound', 'size': float(val['nwound'])},
-                
-                
+                             
                 ]
-                
-             
+           
             })
     print(output)
     sundata = json.dumps(output)
     
 
-    return render_template('index2.html',piedata=piedata,sundata=sundata)
+    return render_template('index2.html',sundata=sundata)
+
+
+def dfbycountry(countrycode):
+    dfcountry= df2.loc[df2['code'] ==countrycode] 
+    return dfcountry
 
 #pie data
 @app.route('/getDataPerCountryPie')
-def getDataPerCountry():
-    country = request.args.get('country', default='United States', type=str)
+def getDataPerCountryPie():
+    country = request.args.get('country', type=str)
     if country=='All':
-        df3=df2.groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
-        piedata= df3.to_json(orient='records')
+        countdf=df2.groupby('success')['success'].count().reset_index(name="count")
+        piedata= countdf.to_json(orient='records')
         piedata = json.dumps(piedata, indent=2)
-        print("piedata",piedata)
         return piedata
+    else:
+        countdf1= dfbycountry(country)
+        countdf1=countdf1.groupby('success')['success'].count().reset_index(name="count")
+        piedata1= countdf1.to_json(orient='records')
+        piedata1 = json.dumps(piedata1, indent=2)
+        return piedata1
 
 
 if __name__ == "__main__":

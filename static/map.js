@@ -86,10 +86,10 @@ function ready(error, topo) {
     console.log(d.id)
     console.log(d)  
     console.log(d.properties.name)
-    country=d.properties.name
-    var newdata = d3.queue().defer(d3.json, "/getDataPerCountryPie?country=" + d.properties.name);
-  
-    drawpie(newdata);
+    country=d.id
+    country1= country.toString()
+    d3.queue().defer(d3.json, "/getDataPerCountryPie?country="+country1)
+    .await(drawpie);
       
   }
 

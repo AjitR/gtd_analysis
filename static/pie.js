@@ -14,10 +14,15 @@ var text = "";
 
 
 function drawpie(error,db){
-  if (error) throw error;
-  console.log("yeh db",db);
-  datapie= JSON.parse(db);
-  console.log("inside!");
+if (error) throw error;
+console.log("db",db);
+datapie=JSON.parse(db);
+console.log("datapie",datapie);
+
+d3.select("#piechart svg").remove();
+// d3.select("#piechartlegend svg").remove();
+
+// document.getElementById("#piechartlegend").remove();
 var widthpie = 500;
 var heightpie= 200;
 var thicknesspie = 40;
@@ -72,7 +77,7 @@ var pathpie = g1.selectAll('path')
  
       g1.append("text")
         .attr("class", "name-text")
-        .text(`${d.data.weaptype1_txt} (${d.data.count})`)
+        .text(`${d.data.success} (${d.data.count})`)
         .attr('text-anchor', 'middle');
     
       let textpie = g1.select("text");
@@ -145,7 +150,7 @@ let keys = legend.selectAll('.key')
 
 		keys.append('div')
 			.attr('class', 'name')
-			.text(d => `${d.weaptype1_txt} (${d.count})`);
+			.text(d => `${d.success} (${d.count})`);
 
     keys.exit().remove();
 }
