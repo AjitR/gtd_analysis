@@ -90,7 +90,8 @@ function ready(error, topo) {
     country1= country.toString()
     d3.queue().defer(d3.json, "/getDataPerCountryPie?country="+country1)
     .await(drawpie);
-      
+    d3.queue().defer(d3.json, "/getDataSun?country="+country1)
+    .await(drawsunburst);
   }
 
   // Draw the map

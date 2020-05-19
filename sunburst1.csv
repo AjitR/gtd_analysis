@@ -1,0 +1,19 @@
+,targtype1_txt,attacktype1_txt,Time
+0,Business,Assassination,1
+1,Business,Bombing/Explosion,9
+2,Educational Institution,Bombing/Explosion,1
+3,Educational Institution,Unarmed Assault,1
+4,Educational Institution,Unknown,1
+5,Government (Diplomatic),Armed Assault,1
+6,Government (Diplomatic),Assassination,1
+7,Government (Diplomatic),Bombing/Explosion,2
+8,Government (General),Assassination,3
+9,Maritime,Armed Assault,2
+10,Maritime,Hijacking,1
+11,Military,Unknown,5
+12,Police,Bombing/Explosion,2
+13,Private Citizens & Property,Assassination,1
+14,Private Citizens & Property,Bombing/Explosion,2
+15,Private Citizens & Property,Hostage Taking (Kidnapping),2
+16,Tourists,Bombing/Explosion,1
+17,Tourists,Hostage Taking (Kidnapping),1
