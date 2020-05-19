@@ -103,7 +103,18 @@ function drawsunburst(error,db1){
        .on('mousemove', function(d) {                  
          tooltip.style('top', (d3.event.layerY + 10) + 'px');
          tooltip.style('left', (d3.event.layerX + 10) + 'px');
-     });
+     })
+     .transition()
+      .duration(function(d, i) {
+      return i * 800;
+    })
+    .attrTween('d', function(d) {
+      var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+      return function(t) {
+          d.endAngle = i(t);
+        return arc(d);
+      }
+   });
    
    d3.select(self.frameElement).style("height", height + "px");
    

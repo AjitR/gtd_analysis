@@ -66,6 +66,8 @@ var pie = d3.pie()
 .value(function(d) { return d.count; })
 .sort(null);
 
+
+
 var pathpie = g1.selectAll('path')
   .data(pie(datapie))
   .enter()
@@ -81,7 +83,9 @@ var pathpie = g1.selectAll('path')
       d3.select(this) 
         .style("opacity", opacityHoverpie);
 
-      let g1 = d3.select("svg")
+      let g1 = d3.select("svg").
+      transition()
+      .duration(700)
         .style("cursor", "pointer")
         .append("g")
         .attr("class", "tooltip")
@@ -139,6 +143,17 @@ var pathpie = g1.selectAll('path')
       d3.select("svg")
         .style("cursor", "none");    
   })
+  .transition()
+  .duration(function(d, i) {
+      return i * 800;
+    })
+    .attrTween('d', function(d) {
+      var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+      return function(t) {
+          d.endAngle = i(t);
+        return arc(d);
+      }
+   })
   .each(function(d, i) { this._current = i; });
 
 let legend = d3.select("#piechartlegend").append('div')
