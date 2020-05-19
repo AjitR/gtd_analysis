@@ -11,7 +11,7 @@ from collections import defaultdict
 
 app = Flask(__name__)
 
-df2 = pd.read_csv(r'data/gtd_code.csv')
+df2 = pd.read_csv(r'data/df2015-18.csv')
 dfyear= pd.read_csv("data/df2015-18.csv")
 @app.route("/")
 def d3():
