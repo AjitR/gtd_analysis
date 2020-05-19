@@ -11,8 +11,9 @@ function drawsunburst(error,db1){
   d3.select("#sunburst svg").remove();
   d3.select("#legend div").remove();
    var width = 300,
-       height =  200,
+       height =  300,
        radius = (Math.min(width, height) / 2) ; 
+       radius = radius - 30;
    var color = d3.scaleOrdinal(d3.schemeOranges[7]);
   
    var legendRectSize = 15; 
@@ -62,21 +63,23 @@ function drawsunburst(error,db1){
    })
    
    
-   var svg = d3.select("#sunburst").append("svg")
-       .attr("width", width) 
-       .attr("height", height) 
-       .attr("align","center")
+   var svvvg = d3.select("#sunburst").append("svg")
+   .attr("width", width) 
+   .attr("height", height) 
+   .attr("align","center");
+
+   var svg = svvvg
      .append("g") 
-       .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+       .attr("transform", "translate(" + width/2 + "," + (height+10)/2 + ")");
    
-       svg.append("text")
-       .attr("x", (radius/2 ))             
-       .attr("y", 0 - (margin.top))
+       svvvg.append("text")
+       .attr("x", (width/2 ))             
+       .attr("y", 15)
        .attr("text-anchor", "middle")  
        .style("font-size", "16px")
        .style("fill","#ccc") 
        .style("text-decoration", "underline")  
-       .text("Yearly attacks for 2014-18");
+       .text("Yearly casulties by attack type");
 
 
    var path = svg.selectAll("path")

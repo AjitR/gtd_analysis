@@ -8,9 +8,9 @@ function updatebarchart(erorr,ddata){
 // set the dimensions and margins of the graph
 
 // set the dimensions and margins of the graph
-var margin = {top: 0, right: 30, bottom: 40, left: 80},
+var margin = {top: 25, right: 30, bottom: 40, left: 80},
 width = 330 - margin.left - margin.right,
-height = 290 - margin.top - margin.bottom;
+height = 320 - margin.top - margin.bottom;
 
 // set the ranges
 var y = d3.scaleBand()
@@ -29,6 +29,16 @@ var svgbar = d3.select("#barchart").append("svg")
 .append("g")
 .attr("transform", 
       "translate(" + margin.left + "," + margin.top*1.5 + ")");
+
+
+      svgbar.append("text")
+      .attr("x", (width / 2))             
+      .attr("y", -13 )
+      .attr("text-anchor", "middle")  
+      .style("font-size", "16px")
+      .style("fill","#ccc") 
+      .style("text-decoration", "underline")  
+      .text("Which type of weapons were used?");
 
 // format the data
 data.forEach(function(d) {
@@ -69,12 +79,3 @@ svgbar.append("g")
 svgbar.append("g")
   .call(d3.axisLeft(y));
 }
-
-svgbar.append("text")
-.attr("x", (width / 2))             
-.attr("y", 0 - (margin.top)+10)
-.attr("text-anchor", "middle")  
-.style("font-size", "16px")
-.style("fill","#ccc") 
-.style("text-decoration", "underline")  
-.text("Which weapons were used?");
