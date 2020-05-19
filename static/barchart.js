@@ -4,9 +4,9 @@ function drawbarchart(erorr,ddata){
     data= JSON.parse(ddata);
 
 // set the dimensions and margins of the graph
-var margin = {top: 5, right: 30, bottom: 30, left: 40},
+var margin = {top: 0, right: 30, bottom: 40, left: 40},
 width = 300 - margin.left - margin.right,
-height = 300 - margin.top - margin.bottom;
+height = 290 - margin.top - margin.bottom;
 
 // set the ranges
 var y = d3.scaleBand()
@@ -47,14 +47,19 @@ svg.selectAll(".bar")
   .attr("width", function(d) {return x(d.count); } )
   .attr("y", function(d) { return y(d.weaptype1_txt); })
   .attr("height", y.bandwidth())
-  .attr("fill","#009599");
+  .attr("fill","#f79862");
 
 // add the x Axis
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
   .attr("fill","#ccc")
   .attr("text","#ccc")
-  .call(d3.axisBottom(x));
+  .call(d3.axisBottom(x))
+  .selectAll("text")
+  .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
 
 // add the y Axis
 svg.append("g")

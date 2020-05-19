@@ -112,7 +112,8 @@ def getDataPerCountryBar():
         df3=df2.groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
     else:
         print("insode app country selected is"+country)
-        df3=df2.loc[df2['country_txt']==country].groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
+        countryspecificdf = dfbycountry(country)
+        df3=countryspecificdf.groupby(['weaptype1_txt'])['weaptype1'].count().reset_index(name="count")
     
     bardata= df3.to_json(orient='records')
     bardata = json.dumps(bardata, indent=2)

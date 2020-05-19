@@ -89,7 +89,7 @@ function ready(error, topo) {
     .await(drawpie);
     d3.queue().defer(d3.json, "/getDataSun?country="+country1)
     .await(drawsunburst);
-    d3.queue().defer(d3.json, "/getDataPerCountryBar?country=" + d.properties.name).await(updatebarchart);
+    d3.queue().defer(d3.json, "/getDataPerCountryBar?country=" + country1).await(updatebarchart);
   }
 
   // Draw the map

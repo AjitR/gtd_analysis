@@ -7,8 +7,9 @@ var devicePixelRatio = window.devicePixelRatio || 1;
 
 var color = d3.scaleOrdinal()
   .domain(["Bombing/Explosion", "Armed Assault","Facility/Infrastructure Attack", "Assassination","Hostage Taking (Kidnapping)", "Unknown","Hostage Taking (Barricade Incident)", "Hijacking","Unarmed Assault"])
-  .range(["#DB7F85", "#50AB84", "#4C6C86", "#C47DCB", "#B59248", "#DD6CA7", "#E15E5A", "#5DA5B3", "#725D82"]);
+  .range(d3.schemeOranges[8]);
 
+  //  .range(["#DB7F85", "#50AB84", "#4C6C86", "#C47DCB", "#B59248", "#DD6CA7", "#E15E5A", "#5DA5B3", "#725D82"]);
 var types = {
   "Number": {
     key: "Number",

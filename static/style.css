@@ -144,9 +144,9 @@ body {
       left: 100%;
     }
 
-/*    text{
-      pointer-events:none;
-    }*/
+   text{
+      fill:#ccc;
+    }
 
     .details{
       color:white;
