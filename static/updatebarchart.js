@@ -8,7 +8,7 @@ function updatebarchart(erorr,ddata){
 // set the dimensions and margins of the graph
 
 // set the dimensions and margins of the graph
-var margin = {top: 25, right: 30, bottom: 40, left: 80},
+var margin = {top: 25, right: 30, bottom: 50, left: 80},
 width = 330 - margin.left - margin.right,
 height = 320 - margin.top - margin.bottom;
 
